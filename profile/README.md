@@ -1,8 +1,6 @@
 <div align="center">
 
-# Smedjan
-
-### The smithy for language models
+<a href="https://smedjan.dev"><img src="https://raw.githubusercontent.com/smedjan/smedjan/main/docs/banner.png" alt="SMEDJAN — pure-Rust LLM engine. Own the stack." width="840"></a>
 
 **A pure-Rust LLM training &amp; inference engine — own the whole stack, from tokenizer to served checkpoint. Metal + CUDA. Zero Python, zero PyTorch, zero cloud.**
 
@@ -19,7 +17,7 @@
 - **One binary, the whole pipeline** — `tokenizer → prepare → train → distill → sft → dpo → quantize → export-gguf → generate`. No glue scripts, no handoff between frameworks, no step that secretly needs Python.
 - **Two GPU backends, one codebase** — Metal on Apple Silicon, CUDA on NVIDIA, selected at compile time. Train on a Mac, resume on an H100, same checkpoint format.
 - **Built from scratch** — hand-written tape-based autograd; an RMSNorm / RoPE (NTK + YaRN) / GQA / SwiGLU decoder; alternative mixers (linear attention, SSM/Mamba-2, RWKV, MLA, block-sparse); MoE routing; AdamW + Muon/NorMuon; speculative decoding; Q4/Q8 quantization; safetensors + GGUF interop.
-- **Measured, not extrapolated** — a 98M model runs **170 → 800 tok/s** on an M1 Mac Mini after the Metal optimization pass (4.7×).
+- **Measured, not extrapolated** — on an M1 Mac mini (16 GB) the 45M `medium` model runs **~5,090 tok/s** inference and **~1,150 tok/s** training; the hardware simdgroup-MMA path is ~1.3–1.4× the scalar fallback. On an RTX 4090, forward inference reaches **~70,000 tok/s**. Reproduce with `smedjan bench`.
 
 ### See it run
 
