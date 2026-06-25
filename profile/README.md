@@ -1,6 +1,6 @@
 <div align="center">
 
-<a href="https://smedjan.dev"><img src="https://raw.githubusercontent.com/smedjan/smedjan/main/docs/banner.png?v=2" alt="SMEDJAN — pure-Rust LLM engine. Own the stack." width="840"></a>
+<a href="https://smedjan.dev"><img src="https://raw.githubusercontent.com/smedjan/smedjan/main/docs/banner.png?v=3" alt="SMEDJAN — pure-Rust LLM engine. Own the stack." width="840"></a>
 
 **A pure-Rust LLM training &amp; inference engine — own the whole stack, from tokenizer to served checkpoint. Metal + CUDA. Zero Python, zero PyTorch, zero cloud.**
 
